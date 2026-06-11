@@ -1,0 +1,16 @@
+t = int(input()) 
+for _ in range(t) :
+    s = input().strip()
+    number = [] 
+    temp = "" 
+    for ch in s : 
+        if ch.isdigit() : 
+            temp += ch 
+        else :
+            if temp != "" :
+                number.append(int(temp)) 
+                temp = "" 
+    if temp != "" :
+        number.append(int(temp)) 
+
+    print(max(number))
