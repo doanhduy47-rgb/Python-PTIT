@@ -1,0 +1,13 @@
+a = int(input())
+for _ in range(a) :
+    t = int(input())
+    p = 10 
+    while t > p :
+        d = (t // (p // 10)) % 10 
+        if d >= 5 :
+            t = (t // p +1) * p
+        else :
+            t = (t // p) * p 
+
+        p *= 10  
+    print(t)
