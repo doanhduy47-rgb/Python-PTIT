@@ -1,0 +1,7 @@
+import math 
+t = int(input())
+for _ in range(t) :
+    n , x , m = list(map(float,input().split())) 
+    x /= 100 
+    a = math.log(m/n) / math.log(1+x)  
+    print(math.ceil(a))
