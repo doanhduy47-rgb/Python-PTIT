@@ -1,0 +1,12 @@
+t = input()
+a = 0
+b = 0
+for i in t :
+    if i.isupper() :
+        a += 1
+    else :
+        b += 1 
+if a > b :
+    print(t.upper())
+else :
+    print(t.lower()) 
