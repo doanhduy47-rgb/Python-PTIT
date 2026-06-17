@@ -1,0 +1,31 @@
+class Mathang:
+    def __init__(self, ma, ten, sl, gia, ck):
+        self.ma = ma
+        self.ten = ten
+        self.sl = int(sl)
+        self.gia = int(gia)
+        self.ck = int(ck)
+        self.tongtien = self.sl * self.gia - self.ck
+
+    def __str__(self):
+        return (str(self.ma) + ' ' + str(self.ten) + ' ' +
+                str(self.sl) + ' ' + str(self.gia) + ' ' +
+                str(self.ck) + ' ' + str(self.tongtien))
+
+
+t = int(input())
+a = []
+
+for _ in range(t):
+    ma = input()
+    ten = input()
+    sl = input()
+    gia = input()
+    ck = input()
+
+    a.append(Mathang(ma, ten, sl, gia, ck))
+
+a = sorted(a, key=lambda x: -x.tongtien)
+
+for i in a:
+    print(i)
