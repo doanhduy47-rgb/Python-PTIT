@@ -1,0 +1,18 @@
+class cr:
+    def __init__(self,ten,dv,tg):
+        a = [i[0] for i in ten.split()]
+        b = [i[0] for i in dv.split()]
+        self.id = ''.join(b) + ''.join(a)  
+        self.ten = ten 
+        self.dv = dv
+        c = tg.split(':')
+        self.vantoc = 120 / (int(c[0]) -6 + int(c[1]) / 60 )
+    def __str__(self):
+        return f"{self.id} {self.ten} {self.dv} {round(self.vantoc)} Km/h "
+    
+n = int(input())
+ds = []
+for _ in range(n):
+    ds.append(cr(input(),input(),input()))
+ds = sorted(ds , key =  lambda x : -x.vantoc) 
+print(*ds , sep = '\n') 
