@@ -1,0 +1,12 @@
+t = int(input())
+for _ in range(t) : 
+    a = input() 
+    tong = 0 
+    alp = []
+    for i in a :
+        if i.isalpha() :
+            alp.append(i) 
+        else :
+            tong += int(i)
+    alp = sorted(alp)
+    print(''.join(alp) + str(tong))
