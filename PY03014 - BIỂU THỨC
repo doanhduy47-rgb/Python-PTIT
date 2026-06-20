@@ -1,0 +1,15 @@
+n = int(input())
+for _ in range(n) :
+    t = input()
+    a = []
+    res = []
+    cnt = 1 
+    for i in t :
+        if i == '(' : 
+            a.append(cnt)
+            res.append(cnt) 
+            cnt += 1
+        elif i == ')' :
+            res.append(a[-1])
+            a.pop()
+    print(*res)
