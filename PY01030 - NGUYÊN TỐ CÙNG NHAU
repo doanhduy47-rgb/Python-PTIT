@@ -1,0 +1,13 @@
+import math
+
+N , K = list(map(int,input().split()))
+
+a = 10 ** (K-1)
+b = 10 ** (K) 
+cnt = 0 
+for i in range (a,b) :
+    if math.gcd(i,N) == 1 :
+        print(i , end = ' ') 
+        cnt += 1 
+        if cnt % 10 == 0 :
+            print() 
