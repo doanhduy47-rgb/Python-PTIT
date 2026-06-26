@@ -1,0 +1,22 @@
+t = int(input())
+for _ in range(t):
+    s = input()
+
+    tong = 0
+    tich = 1
+    sokhac0 = False
+
+    for i in range(len(s)):
+        digit = int(s[i])      
+
+        if i % 2 == 0:
+            tong += digit      
+        else:
+            if digit != 0:
+                tich *= digit 
+                sokhac0 = True
+
+    if not sokhac0:
+        tich = 0
+
+    print(tong, tich)
